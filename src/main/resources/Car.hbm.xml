@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<hibernate-mapping>
+  <class name="com.mycompany.finalproject.pojo.Car" table="car">
+    <id column="id" name="id" type="int">
+      <generator class="native"/>
+    </id>
+    <property column="make" name="make" type="string"/>
+    <property column="plate" name="plate" type="string"/>
+    <property column="color" name="color" type="string"/>
+    <many-to-one class="com.mycompany.finalproject.pojo.Driver" column="driver" foreign-key="fk_car_driver" name="driver" not-null="true"/>
+  </class>
+</hibernate-mapping>

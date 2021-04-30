@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Update a dish</div>
+        <form action="/HibernateDemo/dish/update.htm" method="GET">
+            Dish ID:
+            <input type="text" name="id">
+            <br/>
+            Dish Name:
+            <input type="text" name="name">
+            <br/>
+            Dish Category:
+            <!--<input type="text" name="category">-->
+            <select name="category">
+                <option value="Appetizer">Appetizer</option>
+                <option value="Soup&Salad">Soup&Salad</option>
+                <option value="Entree">Entree</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Drink">Drink</option>
+            </select>
+            <br/>
+            Price:
+            <input type="text" name="price">
+            <br/>
+            Info:
+            <input type="text" name="info">
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+        <br/>
+        <button type="button" name="back" onclick="history.back()">Back to home page</button>
+    </body>
+</html>

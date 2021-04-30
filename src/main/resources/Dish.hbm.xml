@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+<hibernate-mapping>
+  <class name="com.mycompany.finalproject.pojo.Dish" table="menu">
+    <id name="dish_id" column="id" type="int">
+      <generator class="native"/>
+    </id>
+    <property name="dish_name" column="dish_name" type="string"/>
+    <property name="dish_category" column="category" type="string"/>
+    <property name="price" column="price" type="double"/>
+    <property name="info" column="info" type="string"/>
+    <property name="restaurant_id" column="restaurant_id" type="int"/>
+  </class>
+</hibernate-mapping>

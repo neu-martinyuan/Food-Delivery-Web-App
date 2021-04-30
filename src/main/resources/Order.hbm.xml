@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<hibernate-mapping>
+  <class name="com.mycompany.finalproject.pojo.Order" table="food_order">
+    <id name="id" column="id" type="int">
+      <generator class="native"/>
+    </id>
+    
+    <property name="dishes" column="dishes" type="string"/>
+    <property name="food_price" column="food_price" type="double"/>
+    <property name="delivery_fee" column="delivery_fee" type="double"/>
+    <many-to-one class="com.mycompany.finalproject.pojo.Driver" column="driver" foreign-key="fk_order_driver" name="driver" not-null="false"/>
+    <many-to-one class="com.mycompany.finalproject.pojo.Restaurant" column="restaurant" foreign-key="fk_order_restaurant" name="restaurant" not-null="true"/>
+    <many-to-one class="com.mycompany.finalproject.pojo.Customer" column="customer" foreign-key="fk_order_customer" name="customer" not-null="true"/>
+    <many-to-one class="com.mycompany.finalproject.pojo.Car" column="car" foreign-key="fk_order_car" name="car" not-null="false"/>
+  </class>
+</hibernate-mapping>
